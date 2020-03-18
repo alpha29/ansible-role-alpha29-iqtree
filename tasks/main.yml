@@ -1,2 +1,12 @@
 ---
-# tasks file for ansible-role-alpha29-iqtree
+- name: unarchive file
+  unarchive:
+    src: "https://github.com/Cibiv/IQ-TREE/releases/download/v{{ iqtree_version }}/iqtree-{{ iqtree_version }}-Linux.tar.gz"
+    dest: /opt
+    remote_src: yes
+
+- name: create links
+  file:
+    src: "/opt/iqtree-{{ iqtree_version }}-Linux/bin/iqtree"
+    dest: "/usr/bin/iqtree"
+    state: link
