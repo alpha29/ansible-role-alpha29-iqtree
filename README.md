@@ -1,5 +1,6 @@
 ansible-role-alpha29-iqtree
 =========
+[![Build Status](https://travis-ci.org/alpha29/ansible-role-alpha29-iqtree.svg?branch=master)](https://travis-ci.org/alpha29/ansible-role-alpha29-iqtree)
 
 Installs [iqtree](http://www.iqtree.org/), a software package for phylogenomic inference.
 
@@ -10,7 +11,7 @@ This role requires root access, so either run it in a playbook with a global `be
 
     - hosts: localhost
       roles:
-        - role: ansible-role-alpha29-iqtree
+        - role: alpha29.iqtree
           become: yes
 
 Role Variables
@@ -35,7 +36,7 @@ Example Playbook
   vars:
     iqtree_version: "1.6.12"
   roles:
-    - role: ansible-role-alpha29-iqtree
+    - role: alpha29.iqtree
       become: yes
 ```
 
@@ -43,6 +44,7 @@ Development
 ------------
 ```
 # Setup:
+git clone git@github.com:alpha29/ansible-role-alpha29-iqtree.git alpha29.iqtree
 python3.7 -m venv env
 source env/bin/activate
 pip install --upgrade pip
@@ -85,4 +87,4 @@ MIT
 Author Information
 ------------------
 
-C.J. Brown (cbrown@alpha29.com)
+<info@alpha29.com>
